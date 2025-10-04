@@ -1,0 +1,26 @@
+.btn {
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.gak {
+  background: #e6eef8;
+  color: #0f172a;
+}
+
+.acc {
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  color: #fff;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(2,6,23,0.06);
+}
