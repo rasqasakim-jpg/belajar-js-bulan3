@@ -1,0 +1,64 @@
+/* Styling untuk Tema Terang (Light Theme) */
+.light-theme .themed-card {
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+  color: #000;
+}
+
+.light-theme .themed-button {
+  padding: 10px 20px;
+  margin: 10px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.light-theme .themed-text {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 6px;
+  font-size: 18px;
+  background: #f0f0f0;
+  color: #000;
+}
+
+/* Styling untuk Tema Gelap (Dark Theme) */
+.dark-theme {
+  background-color: #121212;
+  color: #fff;
+}
+
+.dark-theme .themed-card {
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
+  background: #222;
+  color: #fff;
+}
+
+.dark-theme .themed-button {
+  padding: 10px 20px;
+  margin: 10px;
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dark-theme .themed-text {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 6px;
+  font-size: 18px;
+  background: #333;
+  color: #fff;
+}

@@ -1,21 +1,13 @@
-import React from "react";
-import { useTheme } from "../context/ThemeContext";
+import React, { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
 export default function ThemedCard() {
-  const { theme } = useTheme();
+  const { theme } = useContext(ThemeContext);
 
   return (
-    <div
-      style={{
-        padding: "20px",
-        marginTop: "20px",
-        borderRadius: "8px",
-        backgroundColor: theme === "light" ? "#f5f5f5" : "#000000ff",
-        color: theme === "light" ? "#000" : "#fff",
-      }}
-    >
-      <h3>Theme Card</h3>
-      <p>{theme}</p>
+    <div className="themed-card">
+      <h3>Ini Card dengan Tema {theme === "light" ? "🌞 Light" : "🌙 Dark"}</h3>
+      <p>Background dan warna teks menyesuaikan dengan tema yang aktif.</p>
     </div>
   );
 }

@@ -1,0 +1,13 @@
+.light-theme {
+  background: #ffffff;
+  color: #000000;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+.dark-theme {
+  background: #1a1a1a;
+  color: #ffffff;
+  min-height: 100vh;
+  transition: all 0.3s;
+}

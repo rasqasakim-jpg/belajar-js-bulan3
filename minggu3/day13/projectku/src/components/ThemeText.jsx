@@ -1,12 +1,12 @@
-import React from "react";
-import { useTheme } from "../context/ThemeContext";
+import React, { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
 export default function ThemedText() {
-  const { theme } = useTheme();
+  const { theme } = useContext(ThemeContext);
 
   return (
-    <p style={{ color: theme === "light" ? "#000" : "#fff" }}>
-    {/* tema: {theme} */}
+    <p className="themed-text">
+      Ini adalah teks dengan tema <strong>{theme.toUpperCase()}</strong>
     </p>
   );
 }
