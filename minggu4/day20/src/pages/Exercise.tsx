@@ -38,6 +38,11 @@ export default function Exercise() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p style={{ color: "red" }}>Error: {error}</p>;
 
+  const productsForProductList = data?.map(item => ({
+    ...item,
+    name: item.title,
+  })) || [];
+
   return (
     <div>
       <h1>Exercise: Type-Safe Components & Advanced TS</h1>
@@ -53,21 +58,21 @@ export default function Exercise() {
       <section>
         <h2>Fetched Products</h2>
         <div className="product-list">
-          {data && data.map((item) =>
+          {data && data.map((item, index) =>
             isProduct(item) ? (
               <div key={item.id} className="product-card">
                 <h3>{item.title}</h3>
                 <p>${item.price}</p>
               </div>
             ) : (
-              <p key={item.id}>Invalid product data</p>
+              <p key={`invalid-${index}`}>Invalid product data</p>
             )
           )}
         </div>
       </section>
 
       <UserCard name="Dinda" age={22} isOnline={true} />
-      <ProductList title="Product List Example" products={data || []} />
+      <ProductList title="Product List Example" products={productsForProductList} />
       <Form />
     </div>
   );
